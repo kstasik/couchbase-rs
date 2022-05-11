@@ -120,7 +120,7 @@ fn run_lcb_loop(
 /// returned opaque str and clone it into ownership before return.
 fn bucket_name_for_instance(instance: *mut lcb_INSTANCE) -> Option<String> {
     let mut bucket_ptr: *mut u8 = ptr::null_mut();
-    let opaque_ptr = &mut bucket_ptr as *mut *mut i8;
+    let opaque_ptr = &mut bucket_ptr as *mut *mut u8;
 
     unsafe {
         let status = lcb_cntl(
