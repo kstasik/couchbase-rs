@@ -749,7 +749,7 @@ pub unsafe extern "C" fn logger_callback(
 
     let mut target_buffer = [0u8; LOG_MSG_LENGTH];
     let result = wrapped_vsnprintf(
-        &mut target_buffer[0] as *mut u8 as *mut i8,
+        &mut target_buffer[0],
         LOG_MSG_LENGTH as c_uint,
         fmt,
         ap,
