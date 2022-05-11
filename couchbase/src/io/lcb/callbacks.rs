@@ -727,10 +727,6 @@ fn gen_lcb_io_error() -> std::io::Error {
 
 const LOG_MSG_LENGTH: usize = 1024;
 
-// Windows disagrees with Linux and Macos on which type is available.
-#[cfg(not(target_os = "windows"))]
-pub(crate) type VaList = *mut __va_list_tag;
-#[cfg(target_os = "windows")]
 pub(crate) type VaList = va_list;
 
 pub unsafe extern "C" fn logger_callback(
