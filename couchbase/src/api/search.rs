@@ -1,5 +1,4 @@
 use serde::Serialize;
-use serde_derive::Serialize;
 use serde_json::json;
 use std::fmt::Debug;
 
