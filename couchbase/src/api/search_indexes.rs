@@ -3,8 +3,7 @@ use crate::io::Core;
 use crate::{CouchbaseError, CouchbaseResult, ErrorContext, GenericManagementResult, ServiceType};
 use futures::channel::oneshot;
 use serde::de::DeserializeOwned;
-use serde::Serialize;
-use serde_derive::{Deserialize, Serialize};
+use serde::{Serialize, Deserialize}
 use serde_json::Value;
 use std::collections::HashMap;
 use std::sync::Arc;
